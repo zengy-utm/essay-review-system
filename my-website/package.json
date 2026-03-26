@@ -1,0 +1,29 @@
+{
+  "name": "my-website",
+  "version": "1.0.0",
+  "description": "A simple React website using Vite",
+  "main": "src/main.tsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.4",
+    "axios": "^1.6.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.4",
+    "vite": "^2.6.4",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2",
+    "@types/uuid": "^9.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

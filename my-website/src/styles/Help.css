@@ -1,0 +1,256 @@
+.help-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.help-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.help-header h1 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.help-header p {
+  color: #6b7280;
+  font-size: 1.05rem;
+}
+
+.help-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.help-section h2 {
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* 操作指南 */
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 0;
+}
+
+.guide-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: #f9fafb;
+}
+
+.guide-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.guide-number {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0 auto 0.5rem;
+}
+
+.guide-emoji {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+.guide-card h3 {
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.guide-card p {
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* FAQ */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faq-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  background-color: #f9fafb;
+}
+
+.faq-item.expanded {
+  background-color: #f0f4ff;
+  border-color: #4f46e5;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #1f2937;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+.faq-icon {
+  display: inline-block;
+  color: #6b7280;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.faq-item.expanded .faq-icon {
+  color: #4f46e5;
+}
+
+.faq-answer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+  color: #6b7280;
+  line-height: 1.7;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 信息框 */
+.info-section {
+  background: linear-gradient(135deg, #f0f4ff 0%, #f5f3ff 100%);
+  border: 1px solid #e0e7ff;
+}
+
+.info-box {
+  margin: 0;
+}
+
+.info-box h3 {
+  color: #1f2937;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.info-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-box li {
+  padding: 0.75rem 0;
+  color: #6b7280;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.info-box li:last-child {
+  border-bottom: none;
+}
+
+.info-box li::before {
+  color: #10b981;
+  font-weight: 700;
+}
+
+.info-box p {
+  color: #6b7280;
+  margin: 0 0 1rem 0;
+  line-height: 1.7;
+}
+
+.info-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* 反馈框 */
+.feedback-box {
+  border: 2px dashed #4f46e5;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #f0f4ff;
+}
+
+.feedback-box p {
+  color: #6b7280;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.feedback-button {
+  background-color: #4f46e5;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.feedback-button:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+@media (max-width: 768px) {
+  .help-section {
+    padding: 1rem;
+  }
+
+  .help-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .guides-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .help-section h2 {
+    font-size: 1.25rem;
+  }
+}
