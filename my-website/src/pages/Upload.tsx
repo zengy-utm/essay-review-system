@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {
   validateFileFormat,
   validateFileSize,
@@ -17,7 +17,7 @@ import HistoryRequirementsModal from '../components/HistoryRequirementsModal';
 import '../styles/Upload.css';
 
 const Upload: React.FC = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   
   // 文件状态
   const [essayFile, setEssayFile] = useState<File | null>(null);
@@ -174,7 +174,7 @@ const Upload: React.FC = () => {
 
       // 跳转到结果页面
       setTimeout(() => {
-        history.push('/review');
+        navigate('/review');
       }, 500);
     } catch (err) {
       setError(err instanceof Error ? err.message : '评审失败，请重试');

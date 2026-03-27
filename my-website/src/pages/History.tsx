@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { HistoryRecord, ReviewResult } from '../types/common';
 import { getHistoryRecords } from '../utils/storage';
 import { formatDate, EDUCATION_LEVELS, MAJORS, GRADE_LABELS } from '../utils/storage';
 import '../styles/History.css';
 
 const History: React.FC = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const [records, setRecords] = useState<HistoryRecord[]>([]);
   const [selectedRecord, setSelectedRecord] = useState<HistoryRecord | null>(null);
   const [selectedResultDetails, setSelectedResultDetails] = useState<ReviewResult | null>(null);
@@ -50,7 +50,7 @@ const History: React.FC = () => {
         <div className="empty-state">
           <p>📭 暂无评审历史</p>
           <p className="hint">开始评审你的作业，历史记录将在这里显示</p>
-          <button className="start-button" onClick={() => history.push('/')}>
+          <button className="start-button" onClick={() => navigate('/')}>
             开始评审
           </button>
         </div>

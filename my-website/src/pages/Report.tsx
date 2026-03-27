@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ReviewResult } from '../types/common';
 import { formatDate, formatDuration, EDUCATION_LEVELS, MAJORS, GRADE_LABELS, saveHistoryRecord } from '../utils/storage';
 import '../styles/Report.css';
 
 const Report: React.FC = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const [result, setResult] = useState<ReviewResult | null>(null);
   const [isDownloading, setIsDownloading] = useState(false);
 
@@ -28,9 +28,9 @@ const Report: React.FC = () => {
         reviewedAt: new Date().toISOString(),
       });
     } else {
-      history.push('/');
+      navigate('/');
     }
-  }, [history]);
+  }, [navigate]);
 
   const downloadReport = (format: 'txt' | 'pdf') => {
     if (!result) return;
@@ -316,7 +316,7 @@ const Report: React.FC = () => {
         </button>
         <button
           className="back-button"
-          onClick={() => history.push('/')}
+          onClick={() => navigate('/')}
         >
           返回首页重新评审
         </button>
